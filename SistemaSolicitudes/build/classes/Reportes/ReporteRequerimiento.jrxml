@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteRequerimiento" language="groovy" pageWidth="1270" pageHeight="1800" columnWidth="1230" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2f73685-ffce-45a1-a563-9159101bc310">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#011640"/>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset 1" uuid="a43f38c6-2ef5-446d-bc66-1e4579bfa1d2">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     vista_solicitud.`Nro_solicitud` AS vista_solicitud_Nro_solicitud,
+     vista_solicitud.`Usuario` AS vista_solicitud_Usuario,
+     vista_solicitud.`Tecnico_asignado` AS vista_solicitud_Tecnico_asignado,
+     vista_solicitud.`Asunto` AS vista_solicitud_Asunto,
+     vista_solicitud.`Descripcion` AS vista_solicitud_Descripcion,
+     vista_solicitud.`fh_creacion` AS vista_solicitud_fh_creacion,
+     vista_solicitud.`Tipo` AS vista_solicitud_Tipo,
+     vista_solicitud.`Estado` AS vista_solicitud_Estado,
+     vista_solicitud.`Prioridad` AS vista_solicitud_Prioridad,
+     vista_solicitud.`Categoria` AS vista_solicitud_Categoria,
+     vista_solicitud.`fh_actualizacion` AS vista_solicitud_fh_actualizacion,
+     vista_solicitud.`fh_cierre` AS vista_solicitud_fh_cierre
+FROM
+     `vista_solicitud` vista_solicitud
+WHERE
+     idTipo_solicitud = 2]]>
+		</queryString>
+		<field name="vista_solicitud_Nro_solicitud" class="java.lang.String"/>
+		<field name="vista_solicitud_Usuario" class="java.lang.String"/>
+		<field name="vista_solicitud_Tecnico_asignado" class="java.lang.String"/>
+		<field name="vista_solicitud_Asunto" class="java.lang.String"/>
+		<field name="vista_solicitud_Descripcion" class="java.lang.String"/>
+		<field name="vista_solicitud_fh_creacion" class="java.time.LocalDateTime"/>
+		<field name="vista_solicitud_fh_actualizacion" class="java.time.LocalDateTime"/>
+		<field name="vista_solicitud_fh_cierre" class="java.time.LocalDateTime"/>
+		<field name="vista_solicitud_Tipo" class="java.lang.String"/>
+		<field name="vista_solicitud_Estado" class="java.lang.String"/>
+		<field name="vista_solicitud_Prioridad" class="java.lang.String"/>
+		<field name="vista_solicitud_Categoria" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+     vista_solicitud.`Nro_solicitud` AS vista_solicitud_Nro_solicitud,
+     vista_solicitud.`Usuario` AS vista_solicitud_Usuario,
+     vista_solicitud.`Tecnico_asignado` AS vista_solicitud_Tecnico_asignado,
+     vista_solicitud.`Asunto` AS vista_solicitud_Asunto,
+     vista_solicitud.`Descripcion` AS vista_solicitud_Descripcion,
+     vista_solicitud.`fh_creacion` AS vista_solicitud_fh_creacion,
+     vista_solicitud.`Tipo` AS vista_solicitud_Tipo,
+     vista_solicitud.`Estado` AS vista_solicitud_Estado,
+     vista_solicitud.`Prioridad` AS vista_solicitud_Prioridad,
+     vista_solicitud.`Categoria` AS vista_solicitud_Categoria,
+     vista_solicitud.`fh_actualizacion` AS vista_solicitud_fh_actualizacion,
+     vista_solicitud.`fh_cierre` AS vista_solicitud_fh_cierre
+FROM
+     `vista_solicitud` vista_solicitud
+WHERE
+     idTipo_solicitud = 2]]>
+	</queryString>
+	<field name="vista_solicitud_Nro_solicitud" class="java.lang.String"/>
+	<field name="vista_solicitud_Usuario" class="java.lang.String"/>
+	<field name="vista_solicitud_Tecnico_asignado" class="java.lang.String"/>
+	<field name="vista_solicitud_Asunto" class="java.lang.String"/>
+	<field name="vista_solicitud_Descripcion" class="java.lang.String"/>
+	<field name="vista_solicitud_fh_creacion" class="java.time.LocalDateTime"/>
+	<field name="vista_solicitud_Tipo" class="java.lang.String"/>
+	<field name="vista_solicitud_Estado" class="java.lang.String"/>
+	<field name="vista_solicitud_Prioridad" class="java.lang.String"/>
+	<field name="vista_solicitud_Categoria" class="java.lang.String"/>
+	<field name="vista_solicitud_fh_actualizacion" class="java.time.LocalDateTime"/>
+	<field name="vista_solicitud_fh_cierre" class="java.time.LocalDateTime"/>
+	<title>
+		<band height="160" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="45" width="1200" height="54" uuid="774f285c-b8f7-4e84-9d1f-35d30342caf8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="29"/>
+				</textElement>
+				<text><![CDATA[Reporte de requerimientos registrados]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="20" width="270" height="79" uuid="5c7c2272-5128-42b0-8820-7fb6de99e949"/>
+				<imageExpression><![CDATA["src/Reportes/viatek.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="14" y="120" width="62" height="20" uuid="212434b3-1616-4cbe-8180-91b833087261"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="120" width="32" height="20" uuid="09666494-5866-4d83-b9bc-3ec538400d3f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1110" y="20" width="43" height="20" uuid="becacaca-2b01-4230-b37c-8b67baeb2adb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="120" width="208" height="20" uuid="b565599c-ddf6-47d7-8ec5-c173a0eb9375"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SERYPRO TELECOMUNICACIONES S.A.C.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="120" width="78" height="20" uuid="a4538027-b5a7-4868-a4c4-28ed6a663cc7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[20603402881]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="1153" y="20" width="107" height="20" uuid="8faf1407-64c7-4af3-a152-2da2cd1f439f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="120" width="62" height="20" uuid="bca39a35-583f-4c3d-b27d-7dc5b713682e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="120" width="298" height="20" uuid="336a8a60-94f0-4b4e-8b08-9bb85c27d387"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Av. Paseo de la Republica Nro. 1539 Piso 3 La Victoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="858" y="120" width="92" height="20" uuid="3ad163d7-f578-4069-929c-cf763ede5f44"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="950" y="120" width="100" height="20" uuid="fa04e9e0-9c62-472c-8d98-d408e94a0eb1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Soporte Tecnico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="14" y="140" width="1200" height="1" uuid="bf7bb2a2-85dd-4f38-8e49-ed3e70efbedb"/>
+			</line>
+			<staticText>
+				<reportElement x="1096" y="120" width="47" height="20" uuid="c0852530-e47c-41af-90f6-ec379afb649b"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Celular:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1143" y="120" width="71" height="20" uuid="b22ff592-565c-46ea-9586-04c7bdc5cccf"/>
+				<textElement verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[952 040 383]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="214" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 5" style="table 5" x="14" y="0" width="1200" height="84" uuid="911e7b9b-3d91-487e-a1a9-3dd03a03ebc1"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset 1" uuid="e17d78e3-498d-4381-a5bf-b0e36d9c031f">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="95" uuid="1c377bb0-f946-4d49-b0a8-b1a24a7fce9e">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="489177ac-b979-4afa-8fc4-fd1717d6730b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nro. Solicitud]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="2e455c8e-9e76-4daf-a179-808714e85076"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Nro_solicitud}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="3e56bb73-6fd5-469c-8deb-08a72aee27bf">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="81a9f7d3-dc48-44d1-90b0-e614a4fbf187"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Usuario]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="002f9a8f-d202-4270-94c6-cb4415539167"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Usuario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="8351bcc1-814c-481a-8ac3-cc7b47578544">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="059f7ece-6d9e-41f7-91aa-cec2ba067e17"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Usuario TI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="5c1de4c0-e2a3-4796-a8e6-97cc132ac91c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Tecnico_asignado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="e4ea8a62-3ec5-44ed-9c22-4735326212ad">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="b4f2b9b5-3093-46e1-a3ab-ce6366f8781f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Asunto]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="35925d45-5f33-4ef3-a625-056fea81205c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Asunto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="305b4e90-77be-4503-9d37-4e701bd4b45a">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="6cd830f1-2b6a-4c6f-862a-af383df05ef7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descripcion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="3d4785a1-a179-407e-b063-b6d66a26d394"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Descripcion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="115" uuid="1dcdbaea-675f-4242-935c-58ac69d6ac5a">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="115" height="45" forecolor="#FFFFFF" uuid="59273816-87f7-4254-849d-1d357f866d11"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FH Creacion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="115" height="45" uuid="31b7d672-a3f5-4342-9095-5b664812d7ce"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_fh_creacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="115" uuid="0844d574-e0c7-40e0-a193-0fd3c14ad0cd">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="115" height="45" forecolor="#FFFFFF" uuid="61e0c55b-3360-4939-bc0e-5d420c5b28fb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FH Actualizacion]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="115" height="45" uuid="74ca1409-f74e-4471-8894-7b5ea13e7b7d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_fh_actualizacion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="115" uuid="602a9067-0111-4bd4-931f-d401ba4ab2ca">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="115" height="45" forecolor="#FFFFFF" uuid="8ea21a4d-b2c8-46de-958d-2ba6b2f2b099"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FH Cierre]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="115" height="45" uuid="3e919738-6ea1-4d65-9397-e2a114f1347f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_fh_cierre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="40214e0e-8ec2-48df-a5d2-d4f693a42fd5">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="295fc9d4-89ad-4bbe-b654-3354475dd39a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Tipo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="6068bf97-7ab5-4972-b001-2ccd48eb99a9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Tipo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="8a69dc2b-0652-4596-8390-1f7c263b588c">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="7e4050d9-277d-41f8-b84b-47a0a0293c8b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Estado]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="eed86177-8865-4fdd-9a5d-bfe34defafbb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Estado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="5070e28e-96a9-4894-a277-cae12c892484">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="4708fdff-0a35-416d-9424-ccc72ddeadab"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Prioridad]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="3de8df68-d516-422b-b124-df39276af13c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Prioridad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="fe923721-f177-4978-b82c-cb75dedf1c78">
+						<jr:tableHeader style="table 5_TH" height="45" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="45" forecolor="#FFFFFF" uuid="828a6c25-9c6a-4edc-906e-9d40c8732417"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Categoria]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 5_TD" height="45" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="45" uuid="0c0b9a65-c181-4d53-a6d2-16b0083b4e31"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{vista_solicitud_Categoria}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+</jasperReport>
